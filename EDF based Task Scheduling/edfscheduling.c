@@ -1,9 +1,9 @@
 // write freertos code for EDF (earliest deadline first) based task scheduling
 // Here's an example FreeRTOS code for implementing Earliest Deadline First (EDF) scheduling:
 
-#include "FreeRTOS.h"
-#include "task.h"
-#include "queue.h"
+#include "Source/include/FreeRTOS.h"
+#include "Source/include/task.h"
+#include "Source/include/queue.h"
 
 // Define the task structure
 typedef struct
