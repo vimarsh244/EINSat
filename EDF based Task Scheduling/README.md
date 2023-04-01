@@ -4,20 +4,20 @@
 - https://www.freertos.org/implementation/a00008.html
 
 - https://www.digikey.com/en/maker/projects/introduction-to-rtos-solution-to-part-3-task-scheduling/8fbb9e0b0eed4279a2dd698f02ce125f
-So can we do it in like Arduino IDE. just create functions that can schedule or do we have to use FreeRTOS cause am not able to fix dependencies errors
+    - So can we do it in like Arduino IDE. just create functions that can schedule or do we have to use FreeRTOS cause am not able to fix dependencies errors
 
 - Good overview on types of scheduling algorithms [pdf](resources/TypesOfSchedulingAlgorithms-umich.pdf)
     - Priority Inversion seems trivial especially for our EINSat use.. like sat might need some time to let's say take reading of battery, which will be handled by a subfunction. 
     - Unless we add manual delay there does not seem to be an efficient and continous way..
     - The task will have to be paused, run the other "task" (function) get output and then resume the current task.
 - Interesting task scheduling method (round robin) - https://www.javatpoint.com/os-round-robin-scheduling-algorithm
-    I believe most modern day kernels use this
+    - I believe most modern day kernels use this
 
 - Efficient / Naive EDF [pdf page no 28](resources/Efficient%20Scheduling%20Library%20-%20Robin%20Kase.pdf)
-    Did not quite understand the difference
+    - Did not quite understand the difference
     
 - Scheduling tasks based on how much power it consumes. [pdf](resources/Making%20FreeRTOS%20-%20Energy%20Saving%20Technique.pdf)
-    Might be useful for EINSat usecase of having limited power, but microcontrollers also don't take up a lot of power
+    - Might be useful for EINSat usecase of having limited power, but microcontrollers also don't take up a lot of power
     Also could use deep sleep, and only awake the main core on interrupts (while taking luminosity observation or something)
 
 
