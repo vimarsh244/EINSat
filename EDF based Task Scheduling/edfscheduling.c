@@ -1,9 +1,6 @@
-// write freertos code for EDF (earliest deadline first) based task scheduling
-// Here's an example FreeRTOS code for implementing Earliest Deadline First (EDF) scheduling:
-
-#include "Source/include/FreeRTOS.h"
-#include "Source/include/task.h"
-#include "Source/include/queue.h"
+// #include "Source/include/FreeRTOS.h"
+// #include "Source/include/task.h"
+// #include "Source/include/queue.h"
 
 // Define the task structure
 typedef struct
@@ -163,11 +160,3 @@ int main()
 
     return 0;
 }
-
-// =====
-
-// In this example, we define a task structure that contains the task function, deadline, period, and handle. We create three tasks and define their priorities and periods. We then create a task queue to store the tasks and a scheduler task that will execute the tasks according to the EDF algorithm.
-
-// Each task function updates its own deadline and sends itself to the task queue. The scheduler task waits for a task to become available, calculates the earliest deadline, delays until that deadline, executes the task, updates the task deadline, and sends the task back to the task queue.
-
-// Finally, we start the FreeRTOS scheduler to run the tasks and the scheduler task.
